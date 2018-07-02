@@ -1,4 +1,4 @@
-import Web3 from 'web3';
+import Web3 from '../../node_modules/web3';
 
 // HACK: declare var = window in order to handle error 'cannot read property
 // web3 of null', so this creates a module global because window doesn't exist
