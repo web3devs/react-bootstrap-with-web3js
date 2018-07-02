@@ -1,5 +1,10 @@
 import Web3 from 'web3';
 
+// HACK: declare var = window in order to handle error 'cannot read property
+// web3 of null', so this creates a module global because window doesn't exist
+// in Node.
+// var window = global;
+
 const getWeb3 = new Promise((resolve, reject) => {
   // Wait for loading completion to avoid race conditions with web3 injection timing.
   window.addEventListener('load', () => {
