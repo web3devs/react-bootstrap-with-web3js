@@ -1,14 +1,10 @@
 import Web3 from '../../node_modules/web3';
 
-// HACK: declare var = window in order to handle error 'cannot read property
-// web3 of null', so this creates a module global because window doesn't exist
-// in Node.
-// var window = global;
-
-const getWeb3 = new Promise((resolve, reject) => {
+const getWeb3 = new Promise(resolve => {
   // Wait for loading completion to avoid race conditions with web3 injection timing.
   window.addEventListener('load', () => {
     let results;
+    let fallback = 'muggle mode';
     let web3 = window.web3;
 
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
@@ -24,19 +20,19 @@ const getWeb3 = new Promise((resolve, reject) => {
 
       resolve(results);
     } else {
-      // Fallback to localhost if no web3 injection. We've configured this to
-      // use the development console's port by default.
-      let provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545');
-
-      web3 = new Web3(provider);
+      // HACK: reworked getWeb3 results in order to fit my idea of practical.
+      // Fallback to web3 === undefined in order to display UI components to
+      // the muggles.
+      // let provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545');
+      //
+      // web3 = new Web3(provider);
 
       results = {
-        web3
+        fallback
       };
-
-      console.log('No web3 instance injected, using Local web3.');
-      console.log(reject);
-
+      console.log(
+        'No web3 instance injected, present components in muggle mode.'
+      );
       resolve(results);
     }
   });
