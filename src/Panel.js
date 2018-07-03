@@ -125,7 +125,7 @@ class Panel extends React.Component {
       'eventKey',
       'expanded'
     ]);
-
+    // BUG: unknown prop 'header' on div tag
     return (
       <div {...props} className={classNames(className, getClassSet(bsProps))}>
         {children}

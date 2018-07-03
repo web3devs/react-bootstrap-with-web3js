@@ -1,4 +1,3 @@
 <Alert bsStyle="warning">
-  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too
-  good.
+  <strong>Holy guacamole!</strong> Web3 not detected.
 </Alert>;
