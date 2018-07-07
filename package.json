@@ -127,6 +127,7 @@
     "react-transition-group": "^2.0.0",
     "truffle-contract": "^3.0.6",
     "uncontrollable": "^5.0.0",
+    "upath": "^1.1.0",
     "warning": "^3.0.0",
     "web3": "^0.20.6"
   },
