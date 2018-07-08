@@ -109,13 +109,16 @@
     "release-script": "^1.0.2",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.8.0",
-    "web3": "^0.20.6",
     "webpack": "^4.4.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
     "babel-loader": "^8.0.0-beta.2",
+    "bignumber": "^1.1.0",
+    "bignumber.js": "^7.2.1",
     "classnames": "^2.2.5",
+    "cookiejar": "^2.1.2",
+    "crypto-js": "^3.1.9-1",
     "dom-helpers": "^3.2.0",
     "enzyme-adapter-react-15": "^1.0.1",
     "invariant": "^2.2.4",
@@ -125,10 +128,14 @@
     "react-overlays": "^0.8.0",
     "react-prop-types": "^0.4.0",
     "react-transition-group": "^2.0.0",
+    "truffle": "^4.1.13",
     "truffle-contract": "^3.0.6",
     "uncontrollable": "^5.0.0",
+    "upath": "^1.1.0",
+    "utf8": "^3.0.0",
     "warning": "^3.0.0",
-    "web3": "^0.20.6"
+    "web3": "ethereum/web3.js",
+    "xhr2": "^0.1.4"
   },
   "release-script": {
     "bowerRepo": "git@github.com:react-bootstrap/react-bootstrap-bower.git",

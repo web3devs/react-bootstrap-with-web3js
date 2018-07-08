@@ -77,5 +77,10 @@ describe('<Alert>', () => {
         ReactDOM.findDOMNode(instance).getElementsByClassName('sr-only')[0]
       );
     });
+
+    it('Should have a web3 prop', () => {
+      let instance = ReactTestUtils.renderIntoDocument(<Alert>Message</Alert>);
+      assert.equal(ReactDOM.findDOMNode(instance).getAttribute('web3'), !null);
+    });
   });
 });

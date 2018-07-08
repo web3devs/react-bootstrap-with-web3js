@@ -38,7 +38,8 @@ class Trigger extends React.Component {
           show={this.state.show}
           onHide={this.handleHide}
           container={this}
-          aria-labelledby="contained-modal-title"
+          // HACK: The value for aria-labelledby must be a idlist
+          // aria-labelledby="contained-modal-title"
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title">
