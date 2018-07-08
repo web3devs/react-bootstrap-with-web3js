@@ -4,7 +4,8 @@ class MySmallModal extends React.Component {
       <Modal
         {...this.props}
         bsSize="small"
-        aria-labelledby="contained-modal-title-sm"
+        // HACK: The value for aria-labelledby must be a idlist
+        // aria-labelledby="contained-modal-title-sm"
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-sm">Modal heading</Modal.Title>
@@ -71,7 +72,8 @@ class MyLargeModal extends React.Component {
       <Modal
         {...this.props}
         bsSize="large"
-        aria-labelledby="contained-modal-title-lg"
+        // HACK: The value for aria-labelledby must be a idlist
+        // aria-labelledby="contained-modal-title-lg"
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-lg">Modal heading</Modal.Title>
