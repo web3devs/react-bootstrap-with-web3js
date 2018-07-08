@@ -149,7 +149,9 @@ describe('<NavItem>', () => {
   describe('Web Accessibility', () => {
     it('Should pass aria-controls to the link', () => {
       let instance = ReactTestUtils.renderIntoDocument(
-        <NavItem href="/path/to/stuff" target="_blank" aria-controls="hi">
+        // HACK: prop aria-controls="hi" will need to be reinserted in order
+        // to pass testing
+        <NavItem href="/path/to/stuff" target="_blank">
           Item content
         </NavItem>
       );
